@@ -45,7 +45,7 @@ public class InsertUserAndOrderDemoMain {
                 preparedStatement.execute();
             }
 
-            
+
 
             connection.close();
         } catch (SQLException e) {

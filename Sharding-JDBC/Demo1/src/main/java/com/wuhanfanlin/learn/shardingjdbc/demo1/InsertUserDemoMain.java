@@ -1,5 +1,6 @@
 package com.wuhanfanlin.learn.shardingjdbc.demo1;
 
+import com.p6spy.engine.spy.P6DataSource;
 import org.apache.shardingsphere.api.config.sharding.ShardingRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.TableRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.strategy.StandardShardingStrategyConfiguration;
@@ -50,10 +51,13 @@ public class InsertUserDemoMain {
             }
 
             connection.close();
+
+            System.exit(0);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     private static DataSource getShardingDataSource() throws SQLException {
         ShardingRuleConfiguration shardingRuleConfiguration = new ShardingRuleConfiguration();

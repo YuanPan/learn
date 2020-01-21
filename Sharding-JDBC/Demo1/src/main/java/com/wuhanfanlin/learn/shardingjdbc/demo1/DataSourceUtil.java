@@ -1,5 +1,6 @@
 package com.wuhanfanlin.learn.shardingjdbc.demo1;
 
+import com.p6spy.engine.spy.P6DataSource;
 import com.zaxxer.hikari.HikariDataSource;
 
 import javax.sql.DataSource;
@@ -16,6 +17,8 @@ public final class DataSourceUtil {
         dataSource.setJdbcUrl(String.format("jdbc:mysql://%s:%d/%s?serverTimezone=%s&useUnicode=true&characterEncoding=UTF-8", HOST, PORT, databaseName, "GMT%2B8"));
         dataSource.setUsername(USER_NAME);
         dataSource.setPassword(PASSWORD);
-        return dataSource;
+
+        return new P6DataSource(dataSource);
+        // return dataSource;
     }
 }
