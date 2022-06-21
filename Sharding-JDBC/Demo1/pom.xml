@@ -10,7 +10,7 @@
     <properties>
         <sharding-jdbc.version>4.0.0</sharding-jdbc.version>
         <hikari-cp.version>3.4.2</hikari-cp.version>
-        <mysql-connector.version>8.0.18</mysql-connector.version>
+        <mysql-connector.version>8.0.28</mysql-connector.version>
     </properties>
     <dependencies>
         <dependency>
